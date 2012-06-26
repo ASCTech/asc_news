@@ -1,0 +1,21 @@
+/* Styles for News Features */
+
+.features .views-field-changed {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  line-height: 1em;
+}
+
+/* News Page */
+
+.node-type-qs-news .field-name-field-news-image img {
+  float: left;
+  border: 1px solid #666666;
+  margin: 0px 10px 3px 0px;
+}
+
+.node-type-qs-news .submitted {
+  margin-bottom: 30px;
+}
+

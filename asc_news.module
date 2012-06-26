@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ASC News feature.
+ */
+
+include_once 'asc_news.features.inc';
