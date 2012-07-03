@@ -25,4 +25,4 @@ features[user_permission][] = delete any qs_news content
 features[user_permission][] = delete own qs_news content
 features[user_permission][] = edit any qs_news content
 features[user_permission][] = edit own qs_news content
-stylesheets[all] = news.css
+stylesheets[all][] = news.css
