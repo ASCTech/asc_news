@@ -11,7 +11,7 @@ function asc_news_views_default_views() {
   $export = array();
 
   $view = new view;
-  $view->name = 'news';
+  $view->name = 'asc_news';
   $view->description = 'Views for News Content Type';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -163,7 +163,7 @@ function asc_news_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'qs_news' => 'qs_news',
+    'asc_news' => 'asc_news',
   );
   /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
@@ -172,7 +172,7 @@ function asc_news_views_default_views() {
   $handler->display->display_options['filters']['promote']['value'] = '1';
 
   /* Display: Page */
-  $handler = $view->new_display('news_page', 'Page', 'page');
+  $handler = $view->new_display('page', 'Page', 'news_page');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -183,6 +183,40 @@ function asc_news_views_default_views() {
   $handler->display->display_options['row_options']['comments'] = 0;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: News Terms 1 (field_news_terms_1) */
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['id'] = 'field_news_terms_1_tid';
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['table'] = 'field_data_field_news_terms_1';
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['field'] = 'field_news_terms_1_tid';
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['field_news_terms_1_tid']['not'] = 0;
+  /* Contextual filter: Content: News Terms 2 (field_news_terms_2) */
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['id'] = 'field_news_terms_2_tid';
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['table'] = 'field_data_field_news_terms_2';
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['field'] = 'field_news_terms_2_tid';
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['field_news_terms_2_tid']['not'] = 0;
+  /* Contextual filter: Content: News Terms 3 (field_news_terms_3) */
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['id'] = 'field_news_terms_3_tid';
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['table'] = 'field_data_field_news_terms_3';
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['field'] = 'field_news_terms_3_tid';
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['field_news_terms_3_tid']['not'] = 0;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -196,7 +230,7 @@ function asc_news_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'qs_news' => 'qs_news',
+    'asc_news' => 'asc_news',
   );
   $handler->display->display_options['path'] = 'news';
 
@@ -527,7 +561,7 @@ function asc_news_views_default_views() {
   $handler->display->display_options['fields']['changed']['empty_zero'] = 0;
   $handler->display->display_options['fields']['changed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['changed']['date_format'] = 'date';
-  $export['news'] = $view;
+  $export['asc_news'] = $view;
 
   return $export;
 }
