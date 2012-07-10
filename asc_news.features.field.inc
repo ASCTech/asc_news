@@ -10,8 +10,8 @@
 function asc_news_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-qs_news-body'
-  $fields['node-qs_news-body'] = array(
+  // Exported field: 'node-asc_news-body'
+  $fields['node-asc_news-body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -39,7 +39,7 @@ function asc_news_field_default_fields() {
       'type' => 'text_with_summary',
     ),
     'field_instance' => array(
-      'bundle' => 'qs_news',
+      'bundle' => 'asc_news',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -87,8 +87,8 @@ function asc_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-qs_news-field_ascnews_teaser'
-  $fields['node-qs_news-field_ascnews_teaser'] = array(
+  // Exported field: 'node-asc_news-field_ascnews_teaser'
+  $fields['node-asc_news-field_ascnews_teaser'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -116,7 +116,7 @@ function asc_news_field_default_fields() {
       'type' => 'text',
     ),
     'field_instance' => array(
-      'bundle' => 'qs_news',
+      'bundle' => 'asc_news',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => 'Please note that the front page will only display 60 characters.',
@@ -161,8 +161,8 @@ function asc_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-qs_news-field_news_image'
-  $fields['node-qs_news-field_news_image'] = array(
+  // Exported field: 'node-asc_news-field_news_image'
+  $fields['node-asc_news-field_news_image'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -191,7 +191,7 @@ function asc_news_field_default_fields() {
       'type' => 'image',
     ),
     'field_instance' => array(
-      'bundle' => 'qs_news',
+      'bundle' => 'asc_news',
       'deleted' => '0',
       'description' => 'Supply an optional image to accompany the news story.',
       'display' => array(
@@ -261,10 +261,223 @@ function asc_news_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-asc_news-field_news_terms_1'
+  $fields['node-asc_news-field_news_terms_1'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_news_terms_1',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'news_terms_1',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'asc_news',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '4',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_news_terms_1',
+      'label' => 'News Terms 1',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '6',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-asc_news-field_news_terms_2'
+  $fields['node-asc_news-field_news_terms_2'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_news_terms_2',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'news_terms_2',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'asc_news',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '5',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_news_terms_2',
+      'label' => 'News Terms 2',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '7',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-asc_news-field_news_terms_3'
+  $fields['node-asc_news-field_news_terms_3'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_news_terms_3',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'news_terms_3',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'asc_news',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '6',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_news_terms_3',
+      'label' => 'News Terms 3',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '8',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Description');
   t('Image');
+  t('News Terms 1');
+  t('News Terms 2');
+  t('News Terms 3');
   t('Please note that the front page will only display 60 characters.');
   t('Supply an optional image to accompany the news story.');
   t('Teaser');

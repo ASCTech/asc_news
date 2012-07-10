@@ -58,7 +58,7 @@ function asc_news_taxonomy_default_vocabularies() {
     'news_terms_3' => array(
       'name' => 'News Terms 3',
       'machine_name' => 'news_terms_3',
-      'description' => 'Tertiary vocabulary for news.',
+      'description' => 'Additional vocabulary for news.',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',

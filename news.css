@@ -1,12 +1,12 @@
 /* News Page */
 
-.node-type-qs-news .field-name-field-news-image img {
+.node-type-asc-news .field-name-field-news-image img {
   float: left;
   border: 1px solid #666666;
   margin: 0px 10px 3px 0px;
 }
 
-.node-type-qs-news .submitted {
+.node-type-asc-news .submitted {
   margin-bottom: 30px;
 }
 
