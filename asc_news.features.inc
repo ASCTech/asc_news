@@ -27,7 +27,7 @@ function asc_news_views_api() {
 function asc_news_image_default_styles() {
   $styles = array();
 
-  // Exported image style: news_thumb
+  // Exported image style: news_thumb.
   $styles['news_thumb'] = array(
     'name' => 'news_thumb',
     'effects' => array(
