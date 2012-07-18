@@ -115,7 +115,7 @@ function asc_news_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => '34',
+        'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -124,7 +124,7 @@ function asc_news_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'asc_news',
       'deleted' => '0',
-      'description' => 'Supply an optional image to accompany the news story.',
+      'description' => 'Supply an image to accompany the news story.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -160,7 +160,7 @@ function asc_news_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_news_image',
       'label' => 'Image',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'alt_field' => 1,
         'default_image' => 0,
@@ -177,7 +177,11 @@ function asc_news_field_default_fields() {
         'module' => 'media',
         'settings' => array(
           'allowed_schemes' => array(
+            'flickr' => 0,
+            'issuu' => 0,
             'public' => 'public',
+            'vimeo' => 0,
+            'youtube' => 0,
           ),
           'allowed_types' => array(
             'audio' => 0,
@@ -185,7 +189,13 @@ function asc_news_field_default_fields() {
             'image' => 'image',
             'video' => 0,
           ),
-          'browser_plugins' => array(),
+          'browser_plugins' => array(
+            'library' => 0,
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 0,
+            'upload' => 0,
+          ),
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
@@ -414,7 +424,7 @@ function asc_news_field_default_fields() {
   t('News Terms 1');
   t('News Terms 2');
   t('News Terms 3');
-  t('Supply an optional image to accompany the news story.');
+  t('Supply an image to accompany the news story.');
 
   return $fields;
 }

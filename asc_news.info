@@ -41,3 +41,4 @@ features[variable][] = tvi_vocab_news_terms_1
 features[variable][] = tvi_vocab_news_terms_2
 features[variable][] = tvi_vocab_news_terms_3
 features[views_view][] = asc_news
+stylesheets[all][] = news.css
