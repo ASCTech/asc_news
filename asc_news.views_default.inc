@@ -160,39 +160,12 @@ function asc_news_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: News Terms 1 (field_news_terms_1) */
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['id'] = 'field_news_terms_1_tid';
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['table'] = 'field_data_field_news_terms_1';
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['field'] = 'field_news_terms_1_tid';
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['default_argument_skip_url'] = 0;
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_news_terms_1_tid']['not'] = 0;
-  /* Contextual filter: Content: News Terms 2 (field_news_terms_2) */
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['id'] = 'field_news_terms_2_tid';
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['table'] = 'field_data_field_news_terms_2';
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['field'] = 'field_news_terms_2_tid';
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['default_argument_skip_url'] = 0;
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_news_terms_2_tid']['not'] = 0;
-  /* Contextual filter: Content: News Terms 3 (field_news_terms_3) */
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['id'] = 'field_news_terms_3_tid';
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['table'] = 'field_data_field_news_terms_3';
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['field'] = 'field_news_terms_3_tid';
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['default_argument_skip_url'] = 0;
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_news_terms_3_tid']['not'] = 0;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -212,6 +185,8 @@ function asc_news_views_default_views() {
 
   /* Display: Small Feature */
   $handler = $view->new_display('block', 'Small Feature', 'news_block_small');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'features-list features span-6';
   $handler->display->display_options['display_description'] = 'Feature with news listed vertically.';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -243,7 +218,7 @@ function asc_news_views_default_views() {
   $handler->display->display_options['fields']['field_news_image']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_news_image']['settings'] = array(
-    'image_style' => 'thumbnail',
+    'image_style' => 'news_tiny_thumb',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_news_image']['field_api_classes'] = 0;
@@ -286,7 +261,9 @@ function asc_news_views_default_views() {
   $handler->display->display_options['fields']['changed']['hide_empty'] = 0;
   $handler->display->display_options['fields']['changed']['empty_zero'] = 0;
   $handler->display->display_options['fields']['changed']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['changed']['date_format'] = 'date';
+  $handler->display->display_options['fields']['changed']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['changed']['custom_date_format'] = 'm/d/Y';
+  $handler->display->display_options['block_description'] = 'News Feature Small';
 
   /* Display: Large Feature */
   $handler = $view->new_display('block', 'Large Feature', 'news_block_large');
@@ -404,7 +381,7 @@ function asc_news_views_default_views() {
   $handler->display->display_options['fields']['changed']['empty_zero'] = 0;
   $handler->display->display_options['fields']['changed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['changed']['date_format'] = 'date';
-  $handler->display->display_options['block_description'] = 'News Feature Small';
+  $handler->display->display_options['block_description'] = 'News Feature Large';
 
   /* Display: Large Right Column */
   $handler = $view->new_display('attachment', 'Large Right Column', 'news_block_large_attachment');
@@ -541,6 +518,7 @@ function asc_news_views_default_views() {
   $handler->display->display_options['fields']['changed']['empty_zero'] = 0;
   $handler->display->display_options['fields']['changed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['changed']['date_format'] = 'date';
+  $handler->display->display_options['block_description'] = 'News List';
   $export['asc_news'] = $view;
 
   return $export;
