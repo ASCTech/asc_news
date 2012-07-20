@@ -13,6 +13,28 @@ function asc_news_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'block_titlelink_views_asc_news-news_block_large';
+  $strongarm->value = array(
+    'url' => 'news',
+    'display' => 1,
+    'title' => 'News Page',
+  );
+  $export['block_titlelink_views_asc_news-news_block_large'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'block_titlelink_views_asc_news-news_block_small';
+  $strongarm->value = array(
+    'url' => 'news',
+    'display' => 1,
+    'title' => 'News Page',
+  );
+  $export['block_titlelink_views_asc_news-news_block_small'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__asc_news';
   $strongarm->value = array(
     'view_modes' => array(
