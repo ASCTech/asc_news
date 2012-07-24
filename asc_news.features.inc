@@ -45,6 +45,28 @@ function asc_news_views_api() {
 function asc_news_image_default_styles() {
   $styles = array();
 
+  // Exported image style: news_front_thumb.
+  $styles['news_front_thumb'] = array(
+    'name' => 'news_front_thumb',
+    'effects' => array(
+      3 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '122',
+          'height' => '122',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: news_thumb.
   $styles['news_thumb'] = array(
     'name' => 'news_thumb',
@@ -61,6 +83,28 @@ function asc_news_image_default_styles() {
         'data' => array(
           'width' => '79',
           'height' => '79',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: news_tiny_thumb.
+  $styles['news_tiny_thumb'] = array(
+    'name' => 'news_tiny_thumb',
+    'effects' => array(
+      4 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '40',
+          'height' => '45',
         ),
         'weight' => '1',
       ),
