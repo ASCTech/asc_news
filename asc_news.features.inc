@@ -11,13 +11,8 @@ function asc_news_block_class_features_default_class() {
   return array(
     0 => array(
       'module' => 'views',
-      'delta' => 'asc_news-news_block_large',
-      'css_classes' => '',
-    ),
-    1 => array(
-      'module' => 'views',
       'delta' => 'asc_news-news_block_small',
-      'css_classes' => 'grid-3 features-half',
+      'css_classes' => 'feature-half',
     ),
   );
 }
