@@ -91,6 +91,80 @@ function asc_news_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-asc_news-field_ascnews_teaser'.
+  $fields['node-asc_news-field_ascnews_teaser'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_ascnews_teaser',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '300',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'asc_news',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Please note that the front page will only display 60 characters.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_ascnews_teaser',
+      'label' => 'Teaser',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '30',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
+      ),
+    ),
+  );
+
   // Exported field: 'node-asc_news-field_news_image'.
   $fields['node-asc_news-field_news_image'] = array(
     'field_config' => array(
@@ -255,7 +329,7 @@ function asc_news_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '5',
         ),
       ),
       'entity_type' => 'node',
@@ -326,7 +400,7 @@ function asc_news_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'node',
@@ -424,7 +498,9 @@ function asc_news_field_default_fields() {
   t('News Terms 1');
   t('News Terms 2');
   t('News Terms 3');
+  t('Please note that the front page will only display 60 characters.');
   t('Supply an image to accompany the news story.');
+  t('Teaser');
 
   return $fields;
 }

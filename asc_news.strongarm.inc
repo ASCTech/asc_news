@@ -109,6 +109,34 @@ function asc_news_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_asc_news_pattern';
+  $strongarm->value = 'news/[node:title]';
+  $export['pathauto_node_asc_news_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_news_terms_1_pattern';
+  $strongarm->value = 'news/[term:tid]';
+  $export['pathauto_taxonomy_term_news_terms_1_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_news_terms_2_pattern';
+  $strongarm->value = 'news/[term:tid]';
+  $export['pathauto_taxonomy_term_news_terms_2_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_news_terms_3_pattern';
+  $strongarm->value = 'news/[term:tid]';
+  $export['pathauto_taxonomy_term_news_terms_3_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'tvi_vocab_news_terms_1';
   $strongarm->value = (object) array(
     'is_default' => TRUE,
