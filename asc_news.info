@@ -30,7 +30,6 @@ features[fe_block_settings][] = views-asc_news-news_block_list
 features[fe_block_settings][] = views-asc_news-news_block_small
 features[features_api][] = api:1
 features[field][] = node-asc_news-body
-features[field][] = node-asc_news-field_ascnews_teaser
 features[field][] = node-asc_news-field_news_image
 features[field][] = node-asc_news-field_news_terms_1
 features[field][] = node-asc_news-field_news_terms_2
