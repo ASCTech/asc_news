@@ -23,7 +23,7 @@ function asc_news_default_fe_block_settings() {
     'custom' => '0',
     'visibility' => '1',
     'pages' => 'news
-news/filters/*',
+news/filters*',
     'title' => '',
     'cache' => '1',
   );
@@ -38,7 +38,7 @@ news/filters/*',
     'custom' => '0',
     'visibility' => '1',
     'pages' => 'news
-news/filters/*',
+news/filters*',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -53,7 +53,7 @@ news/filters/*',
     'custom' => '0',
     'visibility' => '1',
     'pages' => 'news
-news/filters/*',
+news/filters*',
     'title' => '<none>',
     'cache' => '1',
   );
