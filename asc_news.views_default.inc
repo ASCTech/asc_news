@@ -462,7 +462,6 @@ function asc_news_views_default_views() {
   /* Display: News List */
   $handler = $view->new_display('block', 'News List', 'news_block_list');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Recent News';
   $handler->display->display_options['display_description'] = 'News list block for sidebar on news story page.';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -496,7 +495,7 @@ function asc_news_views_default_views() {
   $handler->display->display_options['fields']['field_news_image']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_news_image']['settings'] = array(
-    'image_style' => 'thumbnail',
+    'image_style' => 'news_tiny_thumb',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_news_image']['field_api_classes'] = 0;
