@@ -39,7 +39,6 @@ news/filters*',
     'visibility' => '1',
     'pages' => 'news
 news/filters*',
-    'title' => '<none>',
     'cache' => '1',
   );
 
@@ -54,7 +53,6 @@ news/filters*',
     'visibility' => '1',
     'pages' => 'news
 news/filters*',
-    'title' => '<none>',
     'cache' => '1',
   );
 
