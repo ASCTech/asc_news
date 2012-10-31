@@ -124,21 +124,21 @@ function asc_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_news_terms_1_pattern';
-  $strongarm->value = 'news/[term:tid]';
+  $strongarm->value = 'news/filter/[term:tid]';
   $export['pathauto_taxonomy_term_news_terms_1_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_news_terms_2_pattern';
-  $strongarm->value = 'news/[term:tid]';
+  $strongarm->value = 'news/filter/[term:tid]';
   $export['pathauto_taxonomy_term_news_terms_2_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_news_terms_3_pattern';
-  $strongarm->value = 'news/[term:tid]';
+  $strongarm->value = 'news/filter/[term:tid]';
   $export['pathauto_taxonomy_term_news_terms_3_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -178,7 +178,7 @@ function asc_news_strongarm() {
     'type' => 'vocab',
     'xid' => 'news_terms_3',
     'view_name' => 'asc_news',
-    'display' => 'asc_events_page',
+    'display' => 'news_page',
     'status' => 1,
   );
   $export['tvi_vocab_news_terms_3'] = $strongarm;
