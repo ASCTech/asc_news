@@ -13,7 +13,7 @@ function asc_news_views_default_views() {
   $view = new view();
   $view->name = 'asc_news';
   $view->description = 'Views for News Content Type';
-  $view->tag = 'default';
+  $view->tag = 'ASC';
   $view->base_table = 'node';
   $view->human_name = 'News';
   $view->core = 7;
