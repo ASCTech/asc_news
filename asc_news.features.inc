@@ -76,7 +76,7 @@ function asc_news_custom_breadcrumbs_views_config_features_default_settings() {
       'visibility_php' => '',
       'views_path' => 'news',
       'language' => '',
-    );
+    ),
   );
   return $custom_breadcrumbs_views_configs;
 }
