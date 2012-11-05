@@ -46,7 +46,18 @@ function asc_news_custom_breadcrumbs_config_features_default_settings() {
   $custom_breadcrumbs_configs = array();
 
   $custom_breadcrumbs_configs[] = array(
-    'asc_news-1689872192' => array(),
+    'asc_news-1689872192' => array(
+      'name' => 'News',
+      'machine_name' => 'asc_news-1689872192',
+      'titles' => 'News
+[node:title]',
+      'paths' => 'news
+[node:url:path]',
+      'visibility_php' => '',
+      'node_type' => 'asc_news',
+      'language' => '',
+    ),
+  );
   );
   return $custom_breadcrumbs_configs;
 }
@@ -58,7 +69,14 @@ function asc_news_custom_breadcrumbs_views_config_features_default_settings() {
   $custom_breadcrumbs_views_configs = array();
 
   $custom_breadcrumbs_views_configs[] = array(
-    -618409519 => array(),
+    -618409519 => array(
+      'name' => 'News',
+      'machine_name' => 'news-view-cb-config',
+      'titles' => 'News',
+      'paths' => 'news',
+      'visibility_php' => '',
+      'views_path' => 'news',
+      'language' => '',
   );
   return $custom_breadcrumbs_views_configs;
 }
