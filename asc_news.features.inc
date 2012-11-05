@@ -58,7 +58,6 @@ function asc_news_custom_breadcrumbs_config_features_default_settings() {
       'language' => '',
     ),
   );
-  );
   return $custom_breadcrumbs_configs;
 }
 
