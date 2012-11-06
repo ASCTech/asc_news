@@ -12,6 +12,7 @@ dependencies[] = custom_breadcrumbs
 dependencies[] = custom_breadcrumbs_views
 dependencies[] = fe_block
 dependencies[] = features
+dependencies[] = field_group
 dependencies[] = image
 dependencies[] = media
 dependencies[] = options

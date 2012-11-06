@@ -36,7 +36,7 @@ function asc_news_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function asc_news_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }
 
 /**
@@ -59,26 +59,6 @@ function asc_news_custom_breadcrumbs_config_features_default_settings() {
     ),
   );
   return $custom_breadcrumbs_configs;
-}
-
-/**
- * Implements hook_custom_breadcrumbs_views_config_features_default_settings().
- */
-function asc_news_custom_breadcrumbs_views_config_features_default_settings() {
-  $custom_breadcrumbs_views_configs = array();
-
-  $custom_breadcrumbs_views_configs[] = array(
-    -618409519 => array(
-      'name' => 'News',
-      'machine_name' => 'news-view-cb-config',
-      'titles' => 'News',
-      'paths' => 'news',
-      'visibility_php' => '',
-      'views_path' => 'news',
-      'language' => '',
-    ),
-  );
-  return $custom_breadcrumbs_views_configs;
 }
 
 /**
