@@ -137,7 +137,7 @@ function asc_news_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'square_thumbnail',
+            'image_style' => '250_square_thumbnail',
           ),
           'type' => 'image',
           'weight' => '0',
