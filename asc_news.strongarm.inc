@@ -60,6 +60,24 @@ function asc_news_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'front_rotor_short' => array(
+        'custom_settings' => FALSE,
+      ),
+      'front_rotor_tall' => array(
+        'custom_settings' => FALSE,
+      ),
+      'front_text' => array(
+        'custom_settings' => FALSE,
+      ),
+      'front_quick_text' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -124,29 +142,29 @@ function asc_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_news_terms_1_pattern';
-  $strongarm->value = 'news/filter/[term:tid]';
+  $strongarm->value = 'news/filters/[term:tid]';
   $export['pathauto_taxonomy_term_news_terms_1_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_news_terms_2_pattern';
-  $strongarm->value = 'news/filter/[term:tid]';
+  $strongarm->value = 'news/filters/[term:tid]';
   $export['pathauto_taxonomy_term_news_terms_2_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_news_terms_3_pattern';
-  $strongarm->value = 'news/filter/[term:tid]';
+  $strongarm->value = 'news/filters/[term:tid]';
   $export['pathauto_taxonomy_term_news_terms_3_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'tvi_vocab_news_terms_1';
-  $strongarm->value = (object) array(
-    'is_default' => TRUE,
+  $strongarm->value = array(
+    'is_default' => FALSE,
     'type' => 'vocab',
     'xid' => 'news_terms_1',
     'view_name' => 'asc_news',
@@ -159,8 +177,8 @@ function asc_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'tvi_vocab_news_terms_2';
-  $strongarm->value = (object) array(
-    'is_default' => TRUE,
+  $strongarm->value = array(
+    'is_default' => FALSE,
     'type' => 'vocab',
     'xid' => 'news_terms_2',
     'view_name' => 'asc_news',
@@ -173,8 +191,8 @@ function asc_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'tvi_vocab_news_terms_3';
-  $strongarm->value = (object) array(
-    'is_default' => TRUE,
+  $strongarm->value = array(
+    'is_default' => FALSE,
     'type' => 'vocab',
     'xid' => 'news_terms_3',
     'view_name' => 'asc_news',

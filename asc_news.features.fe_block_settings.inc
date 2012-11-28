@@ -33,6 +33,9 @@ function asc_news_default_fe_block_settings() {
     'views-asc_news-news_block_list' => array(
       'delta' => 'asc_news-news_block_list',
       'module' => 'views',
+      'node_type' => array(
+        'asc_news' => TRUE,
+      ),
     ),
     'views-asc_news-news_block_small' => array(
       'delta' => 'asc_news-news_block_small',
@@ -48,11 +51,12 @@ function asc_news_default_fe_block_settings() {
     'delta' => 'news_terms_1',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '0',
-    'region' => 'sidebar',
+    'weight' => '-32',
+    'region' => 'content',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => '',
+    'pages' => 'news
+news/filter*',
     'title' => '',
     'cache' => '1',
   );
@@ -66,7 +70,8 @@ function asc_news_default_fe_block_settings() {
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => '',
+    'pages' => 'news
+news/filter*',
     'title' => '',
     'cache' => '1',
   );
@@ -80,7 +85,8 @@ function asc_news_default_fe_block_settings() {
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => '',
+    'pages' => 'news
+news/filter*',
     'title' => '',
     'cache' => '1',
   );
@@ -90,11 +96,11 @@ function asc_news_default_fe_block_settings() {
     'delta' => 'asc_news-news_block_large',
     'theme' => 'q7',
     'status' => 0,
-    'weight' => '0',
+    'weight' => '-33',
     'region' => '',
     'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
+    'visibility' => '1',
+    'pages' => '<front>',
     'title' => '',
     'cache' => -1,
   );
@@ -103,13 +109,13 @@ function asc_news_default_fe_block_settings() {
     'module' => 'views',
     'delta' => 'asc_news-news_block_list',
     'theme' => 'q7',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
+    'status' => '1',
+    'weight' => '-12',
+    'region' => 'sidebar',
     'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
+    'visibility' => '1',
+    'pages' => 'news/*',
+    'title' => '<none>',
     'cache' => -1,
   );
 
@@ -117,12 +123,12 @@ function asc_news_default_fe_block_settings() {
     'module' => 'views',
     'delta' => 'asc_news-news_block_small',
     'theme' => 'q7',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
+    'status' => '1',
+    'weight' => '-33',
+    'region' => 'postscript_second',
     'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
+    'visibility' => '1',
+    'pages' => '<front>',
     'title' => '',
     'cache' => -1,
   );
