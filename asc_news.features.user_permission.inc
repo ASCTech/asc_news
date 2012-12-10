@@ -14,7 +14,6 @@ function asc_news_user_default_permissions() {
   $permissions['create asc_news content'] = array(
     'name' => 'create asc_news content',
     'roles' => array(
-      'Content Editor' => 'Content Editor',
       'Content Manager' => 'Content Manager',
       'Site Administrator' => 'Site Administrator',
     ),

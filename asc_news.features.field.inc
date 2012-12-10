@@ -41,13 +41,7 @@ function asc_news_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'asc_news',
-      'default_value' => array(
-        0 => array(
-          'summary' => 'Please enter a descriptive summary.',
-          'value' => '',
-          'format' => 'html',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -80,7 +74,7 @@ function asc_news_field_default_fields() {
       'label' => 'Description',
       'required' => 1,
       'settings' => array(
-        'display_summary' => 1,
+        'display_summary' => 0,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
