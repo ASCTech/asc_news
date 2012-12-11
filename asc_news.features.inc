@@ -71,6 +71,7 @@ function asc_news_image_default_styles() {
     ),
   );
 
+<<<<<<< .merge_file_Zrsuq7
   // Exported image style: 40_square.
   $styles['40_square'] = array(
     'name' => '40_square',
