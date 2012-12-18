@@ -33,6 +33,9 @@ function asc_news_default_fe_block_settings() {
     'views-asc_news-news_block_list' => array(
       'delta' => 'asc_news-news_block_list',
       'module' => 'views',
+      'node_type' => array(
+        'asc_news' => TRUE,
+      ),
     ),
     'views-asc_news-news_block_small' => array(
       'delta' => 'asc_news-news_block_small',
@@ -48,11 +51,12 @@ function asc_news_default_fe_block_settings() {
     'delta' => 'news_terms_1',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '0',
-    'region' => 'sidebar',
+    'weight' => '-10',
+    'region' => 'content',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => '',
+    'pages' => 'news
+news/filters*',
     'title' => '',
     'cache' => '1',
   );
@@ -66,7 +70,8 @@ function asc_news_default_fe_block_settings() {
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => '',
+    'pages' => 'news
+news/filters*',
     'title' => '',
     'cache' => '1',
   );
@@ -80,7 +85,8 @@ function asc_news_default_fe_block_settings() {
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => '',
+    'pages' => 'news
+news/filters*',
     'title' => '',
     'cache' => '1',
   );
@@ -94,7 +100,7 @@ function asc_news_default_fe_block_settings() {
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => '<front>',
     'title' => '',
     'cache' => -1,
   );
@@ -103,12 +109,13 @@ function asc_news_default_fe_block_settings() {
     'module' => 'views',
     'delta' => 'asc_news-news_block_list',
     'theme' => 'q7',
-    'status' => 0,
+    'status' => 1,
     'weight' => '0',
-    'region' => '',
+    'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'news
+news/filters*',
     'title' => '',
     'cache' => -1,
   );
@@ -122,7 +129,7 @@ function asc_news_default_fe_block_settings() {
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => '<front>',
     'title' => '',
     'cache' => -1,
   );
