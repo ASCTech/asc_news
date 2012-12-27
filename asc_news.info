@@ -4,6 +4,7 @@ core = 7.x
 package = ASC
 php = 5.2.4
 project = asc_news
+version = 7.x-1.0
 dependencies[] = asc_image_handling
 dependencies[] = asc_taxonomy_filter
 dependencies[] = block_class
