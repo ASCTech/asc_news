@@ -16,6 +16,7 @@ dependencies[] = field_group
 dependencies[] = image
 dependencies[] = media
 dependencies[] = options
+dependencies[] = pathauto
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
