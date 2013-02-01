@@ -9,7 +9,6 @@ dependencies[] = asc_image_handling
 dependencies[] = asc_taxonomy_filter
 dependencies[] = block_class
 dependencies[] = ctools
-dependencies[] = entity_path
 dependencies[] = fe_block
 dependencies[] = features
 dependencies[] = field_group
