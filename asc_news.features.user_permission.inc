@@ -14,8 +14,9 @@ function asc_news_user_default_permissions() {
   $permissions['create asc_news content'] = array(
     'name' => 'create asc_news content',
     'roles' => array(
-      0 => 'Content Manager',
-      1 => 'Site Administrator',
+      'Content Editor' => 'Content Editor',
+      'Content Manager' => 'Content Manager',
+      'Site Administrator' => 'Site Administrator',
     ),
     'module' => 'node',
   );
@@ -24,8 +25,8 @@ function asc_news_user_default_permissions() {
   $permissions['delete any asc_news content'] = array(
     'name' => 'delete any asc_news content',
     'roles' => array(
-      0 => 'Content Manager',
-      1 => 'Site Administrator',
+      'Content Manager' => 'Content Manager',
+      'Site Administrator' => 'Site Administrator',
     ),
     'module' => 'node',
   );
@@ -34,8 +35,9 @@ function asc_news_user_default_permissions() {
   $permissions['delete own asc_news content'] = array(
     'name' => 'delete own asc_news content',
     'roles' => array(
-      0 => 'Content Manager',
-      1 => 'Site Administrator',
+      'Content Editor' => 'Content Editor',
+      'Content Manager' => 'Content Manager',
+      'Site Administrator' => 'Site Administrator',
     ),
     'module' => 'node',
   );
@@ -44,9 +46,9 @@ function asc_news_user_default_permissions() {
   $permissions['edit any asc_news content'] = array(
     'name' => 'edit any asc_news content',
     'roles' => array(
-      0 => 'Content Editor',
-      1 => 'Content Manager',
-      2 => 'Site Administrator',
+      'Content Editor' => 'Content Editor',
+      'Content Manager' => 'Content Manager',
+      'Site Administrator' => 'Site Administrator',
     ),
     'module' => 'node',
   );
@@ -55,9 +57,9 @@ function asc_news_user_default_permissions() {
   $permissions['edit own asc_news content'] = array(
     'name' => 'edit own asc_news content',
     'roles' => array(
-      0 => 'Content Editor',
-      1 => 'Content Manager',
-      2 => 'Site Administrator',
+      'Content Editor' => 'Content Editor',
+      'Content Manager' => 'Content Manager',
+      'Site Administrator' => 'Site Administrator',
     ),
     'module' => 'node',
   );
